@@ -1,4 +1,4 @@
-package chap04.conditional;
+package chap04.iteration;
 
 // float 타입 카운터 변수
 public class ForFloatCounterExample {

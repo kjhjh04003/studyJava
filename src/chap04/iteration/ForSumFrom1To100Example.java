@@ -1,4 +1,4 @@
-package chap04.conditional;
+package chap04.iteration;
 
 // 1부터 100까지 합 출력
 public class ForSumFrom1To100Example {

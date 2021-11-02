@@ -1,4 +1,4 @@
-package chap04.conditional;
+package chap04.iteration;
 
 // 구구단 출력하기
 public class ForMultiplicationTableExample {

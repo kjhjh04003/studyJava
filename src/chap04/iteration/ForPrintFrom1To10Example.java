@@ -1,4 +1,4 @@
-package chap04.conditional;
+package chap04.iteration;
 
 // 1부터 10까지 출력
 public class ForPrintFrom1To10Example {
