@@ -1,0 +1,43 @@
+1. 열거타입
+- 한정된 값만을 갖는 데이터 타입(enumeration type)
+- 몇 개의 열거 상수 중에서 하나의 상수를 저장하는 데이터 타입
+
+2. 열거타입 선언
+- 열거 타입 이름을 정하고 열거 타입 이름으로 소스파일(.java)을 생성해야 한다.
+- 첫 문자를 대문자로 하고 나머지는 소문자로 구성한다.
+- public enum 키워드를 키워드로 먼저 선언
+  public enum 열거타입이름 {...}
+ - 열거 상수는 모두 대문자로 구성한다.
+   public enum Week { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, ...}
+   public enum LoginResult{LOGIN_SUCCESS, LOGIN_FAILED}
+   
+ 3. 열거 타입 변수
+ - 열거 타입도 하나의 데이터 타입이르모 변수를 선언하고 사용해야 한다.
+   열거타입 변수;
+   Week today;
+   Week today = Week.SUNDAY; 
+   
+ 3. 열거 객체의 메소드
+ - 열거 객체는 열거 상수의 문자열을 내부 데이터로 가지고 있다.
+ - name() : 열거 객체의 문자열을 리턴(String 타입 리턴)
+   Week today = Week.SUNDAY;
+   String name = today.name(); // name에는 SUNDAY값 저장
+ - ordinal() : 열거 객체의 순번을 리턴(int 타입 리턴)
+ 	- 전체 열거 객체 중 몇 번째 열거 객체인지 알려준다.
+ 	- 열거 객체의 순번은 열거 타입을 정의할 때 주어진 순번을 말한다.
+ 	Week today = Week.SUNDAY;
+ 	int ordinal = today.ordinal();  
+ - compareTo() : 열거 객체를 비교해서 순번 차이를 리턴(int 리턴)
+   Week day1 = Week.MONDAY;
+   Week day2 = Week.WEDNESDAY;
+   int result1 = day1.compareTo(day2); // -2
+   int result2 = day2.compareTo(day1); // 2
+ - valueOf(String name) : 주어진 문자열의 열거 객체를 리턴(열거 타입 리턴)
+ 	- 매개값으로 주어지는 문자열과 동일한 문자열을 가지는 열거 객체를 리턴
+ 	- 문자열을 입력받아 열거 객체로 변환할 때 유용하게 사용
+ 	Week weekDay = Week.valueOf("SATURDAY"); // Week.SATURDAY 열거 객체를 참조
+ - values() : 모든 열거 객체들을 배열로 리턴(열거 배열 리턴)
+   Week[] days = Week.values(); // Week 열거 객체의 모든 상수값을 가져와 배열로 리턴
+   for(Week day : days){
+   		System.out.println(day);
+   	}

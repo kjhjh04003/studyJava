@@ -1,0 +1,6 @@
+1. 다차원배열
+- 값들이 행과 열로 구성된 배열
+  2(행) x 3(열) 배열
+  int[][] scores = new int[2][3];
+- scores.length : 행의길이
+  scores[0].length : 열의 길이
